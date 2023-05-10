@@ -92,6 +92,7 @@ body {
   box-shadow: 0 5px 10px #0000002a;
   position: relative;
   animation: moveinbtn 0.9s ease-out 0.75s;
+  animation-fill-mode: backwards;
 }
 .btn:hover {
   transform: translateY(-3px);
