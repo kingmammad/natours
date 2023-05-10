@@ -1,0 +1,158 @@
+@font-face {
+  font-family: lato;
+  src: url("fonts/Lato-Regular.woff2") format("woff2"),
+    url("fonts/Lato-Regular.woff") format("woff"),
+    url("fonts/Lato-Hairline.woff") format("woff");
+
+  font-weight: 400;
+}
+
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 30px;
+  line-height: 1.7;
+  transition: all 0.5s;
+}
+.header {
+  background-image: linear-gradient(to right bottom, #7ed56f9f, #55c57a9f),
+    url(img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  height: 95vh;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  position: relative;
+}
+.logo-box {
+  position: absolute;
+  left: 40px;
+  top: 40px;
+}
+.logo {
+  height: 35px;
+}
+.text-header {
+  text-transform: uppercase;
+  font-family: lato;
+  font-weight: 400;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+.outdoors {
+  text-transform: uppercase;
+
+  letter-spacing: 36px;
+  font-size: 60px;
+  font-weight: 400;
+  text-align: center;
+  display: block;
+  animation-name: moveinleft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  margin-left: 18px;
+}
+.life {
+  display: block;
+  letter-spacing: 17px;
+  text-align: center;
+  font-size: 23px;
+  font-weight: 400;
+  animation-name: moveinright;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+.btn:link,
+.btn:visited {
+  background-color: #fff;
+  color: #777;
+  padding: 15px 40px;
+  border-radius: 100px;
+  transition: all 0.1s;
+  margin-top: 60px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 5px 10px #0000002a;
+  position: relative;
+  animation: moveinbtn 0.9s ease-out 0.75s;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px #0000002a;
+}
+.btn:active {
+  transform: translateY(-1px);
+}
+.btn0::after {
+  contain: "";
+  display: inline-block;
+  border-radius: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.btn-white::after {
+  background-color: #fff;
+}
+.btn-white:hover::after {
+  transform: scaleY(1.4) scaleX(1.6);
+  opacity: 0;
+}
+@keyframes moveinleft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    transform: translatex(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes moveinright {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  80% {
+    transform: translatex(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveinbtn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
